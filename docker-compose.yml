@@ -3,10 +3,9 @@ services:
     build: .
     image: python-discord-bot-template
     env_file:
-      - .env
+      - /srv/appdata/chibot/chibot.env
     volumes:
-      - ./database:/bot/database
-      - ./discord.log:/bot/discord.log
+      - /srv/appdata/chibot
 
     # Alternatively you can set the environment variables as such:
     # /!\ The token shouldn't be written here, as this file is not ignored from Git /!\
